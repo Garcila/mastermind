@@ -41,6 +41,17 @@ body {
   margin-bottom: 10px;
 }
 
+.col2 div:nth-child(n):hover {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.col2 div:nth-child(n):active {
+  transform: scale(0.95);
+  cursor: pointer;
+  border: 1px solid #f6ba2e;
+}
+
 .col2 div:nth-child(1) {
   background-color: #f9be33;
 }
@@ -87,13 +98,14 @@ p {
   list-style-type: none;
 }
 
-.title > div {
+.title div {
   justify-content: center;
 }
 
 .title div:nth-child(1) {
   background-color: #f9be33;
 }
+
 
 .title div:nth-child(2) {
   background-color: #f77e82;

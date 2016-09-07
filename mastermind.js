@@ -17,8 +17,6 @@ $(document).ready(function() {
   };
 
   createPuzzle();
-  console.log(puzzle);
-  console.log(guess);
 
   //Reset game
   $('button').on('click', function() {
