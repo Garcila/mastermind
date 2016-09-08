@@ -24,7 +24,7 @@ body {
 }
 
 .col2 {
-  padding-top: 15%;
+  padding-top: 10%;
   flex: 2;
   display: flex;
   flex-direction: column;
@@ -148,7 +148,7 @@ p {
 }
 
 /*use to highlight current row on play*/
-.highlited {
+.highlighted {
   background-color: #f1ecef;
 }
 
@@ -172,6 +172,10 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+input[type=checkbox] {
+  transform: scale(1.8);
 }
 
 .hide-until-complete {
@@ -218,13 +222,34 @@ p {
   display: none;
 }
 
+.image_rules {
+  width: 100%
+}
+
+.rules {
+  justify-content: center;
+  z-index: 10;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 40px;
+  width: 800px;
+  border: 10px solid black;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+#rules_bttn {
+  width: 100%;
+}
+
 .you-win {
   z-index: 10;
   position: absolute;
   margin-left: 150px;
   margin-top: 200px;
-  width: 300px;
-  height: 150px;
+  width: 400px;
+  height: 300px;
   border: 1px solid #bbbfbe;
   border-radius: 5px;
   background-color: #ffffff;
@@ -235,6 +260,8 @@ p {
 
 .you-win div {
   display: flex;
+  align-content: center;
+  flex-direction: column;
   margin-top: 20px;
   margin-right: 5px;
   margin-left: 5px;

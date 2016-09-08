@@ -6,8 +6,6 @@ $(document).ready(function() {
   const PALETTE = ['#f9be33', '#f77e82', '#9edf89', '#21d2c5', '#147c87', '#793060'];
   var puzzle = [];
   var guess = ['#ffffff','#ffffff','#ffffff','#ffffff'];
-  console.log(puzzle);
-
 
   //function to create the puzzle
   var createPuzzle = function() {
@@ -21,15 +19,14 @@ $(document).ready(function() {
   createPuzzle();
 
   //Reset game
-  // $('.again').on('click', function() {
-  //   console.log('zapato');
-  //   location.reload();
-  // });
+  $('.play_again').on('click', function() {
+    location.reload();
+  });
 
   //Restrict clicks, hide evaluate checkbutton, and enable play on the first row
   var setGame = function() {
     $('.row').addClass('avoid-clicks').find('.check-evaluate').addClass('hide-until-complete');
-    $('.row:nth-child(1)').toggleClass('highlighted avoid-clicks');
+    $('.row:nth-child(1)').toggleClass('highlited avoid-clicks');
   }
 
   setGame();
@@ -61,13 +58,12 @@ $(document).ready(function() {
     };
     compareArrays();
 
-    $(this).closest('.row').next().toggleClass('highlighted avoid-clicks');
-    $(this).closest('.row').toggleClass('highlighted avoid-clicks');
+    $(this).closest('.row').next().toggleClass('highlited avoid-clicks');
+    $(this).closest('.row').toggleClass('highlited avoid-clicks');
     guess = ['#ffffff','#ffffff','#ffffff','#ffffff'];
   });
 
   // Pick color from PALETTE to paint selection
-
   var brushColor = '';
   $('.col2 div').click( function() {
       var x = $(this).css('backgroundColor');
@@ -99,10 +95,4 @@ $(document).ready(function() {
   $('.show_rules').on('click', function() {
     $('.rules').toggleClass('hidden');
   })
-
-  //Reset game
-  $('.play_again').on('click', function() {
-    document.location.reload();
-  });
-
 });
