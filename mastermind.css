@@ -175,7 +175,7 @@ p {
 }
 
 input[type=checkbox] {
-  transform: scale(1.8);
+  transform: scale(1.4);
 }
 
 .hide-until-complete {
